@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "105016839252",
+    "project_id": "fir-lane",
+    "storage_bucket": "fir-lane.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105016839252:android:6ba0a500fc437da462b1c1",
+        "android_client_info": {
+          "package_name": "com.firebaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105016839252-7sd745ob7m7g535m1cid2cjusi1e491d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqEKkSaBbLhNyEdzGp7hccfDecS8ofsVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105016839252-7sd745ob7m7g535m1cid2cjusi1e491d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
