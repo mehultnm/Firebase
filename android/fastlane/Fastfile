@@ -46,8 +46,8 @@ platform :android do
       )
          release = firebase_app_distribution(
               app: "1:105016839252:android:6ba0a500fc437da462b1c1",
-              testers: "mehultandeltnm@gmail.com",
-              release_notes: "Lots of amazing new features to test out!"
+              testers: "tandelmehul97@gmail.com",
+              release_notes: "Latest build with cover image"
 
           )
       end
