@@ -24,13 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set up Android emulator
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 30
-          target: default
-
-        - name: Start Fastlane
+      - name: Start Fastlane
         run: bundle exec fastlane distribute
 
 
