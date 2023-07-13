@@ -3,4 +3,5 @@ on:
     branches:
       - main
 jobs:
-  run: bundle exec fastlane distribute
+  build:
+        run: bundle exec fastlane distribute
