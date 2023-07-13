@@ -5,4 +5,4 @@ on:
       - my-test-branch
     paths:
       - 'src/**'
-      - '.github/workflows/my-workflow-file.yml'
+      - '.github/workflows/distribute.yml'
