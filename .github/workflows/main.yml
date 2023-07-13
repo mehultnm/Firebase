@@ -1,0 +1,25 @@
+name: Distribute
+
+on:
+  push:
+    branches: [ test ]
+
+jobs:
+  distribute:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2bundle install
+
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+
+      - name: Distribute app with 🔥 App Distribution 🚀
+          run: bundle exec fastlane distribute
+          env:
+            FIREBASE_APP_ID: ${{ secrets.1:105016839252:android:6ba0a500fc437da462b1c1 }}
+  - name: Install bundle
+      run: |
+        bundle config path vendor/bundle
+        bundle install --jobs 4 --retry 3
