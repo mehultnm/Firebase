@@ -11,9 +11,7 @@ on:
 jobs:
   build-and-test:
     runs-on: macos-latest
-    runs:
-      using: 'node16'
-      main: 'main.js
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
