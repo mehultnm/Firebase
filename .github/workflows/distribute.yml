@@ -27,4 +27,6 @@ jobs:
       - name: Start Fastlane
         run: bundle exec fastlane distribute
 
-
+      runs:
+        using: 'node16'
+        main: 'main.js
