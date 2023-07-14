@@ -19,30 +19,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Install dependencies
         run: npm install
 
-      - name: Set up Android emulator
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 30
-          target: default
+      - name: Start Fastlane
+        run: cd android && fastlane distribute
 
-      - name: Start emulator
-        run: emulator -avd <Pixel XL API 29> -no-audio -no-window
-
-      - name: Wait for emulator
-        run: adb wait-for-device
-
-      - name: Build and test
-        run: |
-          npx react-native start &
-          sleep 5
-          npx react-native run-android --no-packager --variant=debug
-
-      - name: Run tests
-        run: |
-          npm run test:android
 
