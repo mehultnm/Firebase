@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -19,12 +19,30 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 14
 
       - name: Install dependencies
         run: npm install
 
-      - name: Start Fastlane
-        run: bundle exec fastlane distribute
+      - name: Set up Android emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 30
+          target: default
 
+      - name: Start emulator
+        run: emulator -avd <Pixel XL API 29> -no-audio -no-window
+
+      - name: Wait for emulator
+        run: adb wait-for-device
+
+      - name: Build and test
+        run: |
+          npx react-native start &
+          sleep 5
+          npx react-native run-android --no-packager --variant=debug
+
+      - name: Run tests
+        run: |
+          npm run test:android
 
