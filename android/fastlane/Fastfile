@@ -32,11 +32,6 @@ platform :android do
     # ...
   end
 
-  desc "Deploy a new version to the Google Play"
-  lane :deploy do
-    gradle(task: "clean assembleRelease")
-    upload_to_play_store
-  end
 
   desc "My awesome app"
       lane :distribute do
@@ -50,5 +45,23 @@ platform :android do
               release_notes: "Latest build with cover image"
 
           )
+      end
+
+      desc 'GitHub actions release'
+      lane :version do |options|
+        updateVersion(options)
+      end
+
+
+      lane :github do |_options|
+        gradle(task: 'clean bundleRelease')
+        upload_to_play_store(
+          skip_upload_metadata: true,
+          skip_upload_changelogs: true,
+          skip_upload_screenshots: true,
+          skip_upload_images: true,
+          skip_upload_apk: true,
+          service_account_json_key: ENV['GOOGLE_PLAY_AUTH']
+        )
       end
 end

@@ -31,14 +31,6 @@ Runs all the tests
 
 
 
-### android deploy
-
-```sh
-[bundle exec] fastlane android deploy
-```
-
-Deploy a new version to the Google Play
-
 ### android distribute
 
 ```sh
@@ -46,6 +38,22 @@ Deploy a new version to the Google Play
 ```
 
 My awesome app
+
+### android version
+
+```sh
+[bundle exec] fastlane android version
+```
+
+GitHub actions release
+
+### android github
+
+```sh
+[bundle exec] fastlane android github
+```
+
+
 
 ----
 
