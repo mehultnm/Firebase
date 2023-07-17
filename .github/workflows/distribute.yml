@@ -28,11 +28,11 @@ jobs:
         run: bundle install
 
       - name: Update fastlane
-        working_directory: android
+        working-directory: ./android
         run: bundle update fastlane
 
       - name: Start Fastlane
-        working_directory: android
+        working-directory: ./android
         run: bundle exec fastlane distribute
 
 
