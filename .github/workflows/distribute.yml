@@ -20,6 +20,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          gem install mysql2
           gem install bundler
           bundle install
           bundle exec gem install fastlane
