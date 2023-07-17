@@ -10,20 +10,12 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          ruby-version: 2.7
+          node-version: '14'
+          cache: 'yarn'
+      - run: yarn
+      - run: yarn test
 
-      - name: Install Dependencies
-        run: |
-          gem install bundler
-          bundle install
-          bundle exec gem install fastlane
-
-      - name: Run Your Script
-        run: bundle exec fastlane distribute
 
