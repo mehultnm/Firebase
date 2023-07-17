@@ -11,9 +11,6 @@ const App =() => {
         <Text style={{color:'#000',fontSize:25,fontWeight:'700'}}>GITHUB ACTIONS</Text>
         <Text style={{color:'#000',fontSize:25,fontWeight:'700'}}>GITHUB ACTIONS</Text>
         <Text style={{color:'#000',fontSize:25,fontWeight:'700'}}>GITHUB ACTIONS</Text>
-        <Text style={{color:'#000',fontSize:25,fontWeight:'700'}}>GITHUB ACTIONS</Text>
-        <Text style={{color:'#000',fontSize:25,fontWeight:'700'}}>New ACTIONS</Text>
-        <Text style={{color:'#000',fontSize:25,fontWeight:'700'}}>New ACTIONS</Text>
         <Text style={{color:'#000',fontSize:25,fontWeight:'700'}}>GITHUB ACTIONS TEST</Text>
         <Text style={{color:'#000',fontSize:25,fontWeight:'700'}}>GITHUB ACTIONS TEST</Text>
 
