@@ -23,6 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
+              fastlane init
 
       - name: Start Fastlane
         run: fastlane distribute
