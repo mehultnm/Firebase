@@ -24,10 +24,14 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+          - name: Run Bundle Install
+              working-directory: ./android
+              run: bundle install
+          - name: Update fastlane
+                  working-directory: ./android
+                  run: bundle update fastlane
 
       - name: Start Fastlane
-        run:  bundle install
-              bundle update fastlane
-              bundle exec fastlane distribute
+        run: bundle exec fastlane distribute
 
 
