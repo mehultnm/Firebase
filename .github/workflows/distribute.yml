@@ -4,28 +4,25 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: macos-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          node-version: 16
+          ruby-version: 2.7
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install Dependencies
+        run: |
+          gem install bundler  # Install Bundler
+          bundle install  # Install project dependencies
 
-      - name: Start Fastlane
-        run: react-native run-android
-
-
+      - name: Run Your Script
+        run: bundle exec fastlane distribute
 
