@@ -16,11 +16,10 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: 2.6.3
 
       - name: Install Dependencies
         run: |
-          gem install mysql2
           gem install bundler
           bundle install
           bundle exec gem install fastlane
