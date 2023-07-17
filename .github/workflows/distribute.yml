@@ -22,7 +22,7 @@ jobs:
         run: |
           gem install bundler
           bundle install
-          sudo gem install digest-crc -v 0.6.1
+         bundle exec install digest-crc -v 0.6.1
           bundle exec gem install fastlane
 
       - name: Run Your Script
