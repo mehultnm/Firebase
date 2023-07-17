@@ -20,8 +20,9 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          gem install bundler  # Install Bundler
-          bundle install  # Install project dependencies
+          gem install bundler
+          bundle install
+          bundle exec gem install fastlane
 
       - name: Run Your Script
         run: bundle exec fastlane distribute
