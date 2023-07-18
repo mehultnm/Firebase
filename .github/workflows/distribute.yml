@@ -35,7 +35,7 @@ jobs:
       - name: Set up Android SDK
           uses: android-actions/setup-android@v2
           with:
-            sdk-version: '<android-sdk-version>'
+            sdk-version: '31.0.0'
 
       - name: Run Bundle Install
         run: bundle install
